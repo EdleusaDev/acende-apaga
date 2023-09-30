@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<title>Testando conhecimentos em Javascr</title>
+	<style type="text/css">
+		#imagem, #botao{
+			text-align: center;
+		}
+
+		h1{
+			color: white;
+			text-align: center;
+		}
+	</style>
+</head>
+<body style="background-color: black">
+	<h1>Alterando src de uma imagem com JavaScript</h1>
+	<script>
+	function luz(status){
+		var lampada;
+		if (status == 0){
+			lampada = "lampadaApagada.png"
+		} else{
+			lampada = "lampadaAcesa.png"
+		}
+
+		document.getElementById('lampEscolhida').src=lampada;
+	}
+
+	</script>
+<div id="imagem">
+	<img id="lampEscolhida" src="lampadaApagada.png" width="200" height="360">
+</div>
+
+	<p id="botao">
+		<button type="button" onclick="luz(1)">Acender</button>
+		<button type="button" onclick="luz(0)">Apagar</button>
+
+	</p>
+</body>
+</html>
